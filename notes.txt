@@ -1,0 +1,74 @@
+--------------------------------------------------------Lecture 7 SQL ------------------------------------------------------------------->
+
+relational database
+- sql - structured query language
+  CRUD
+  c - create, insert
+  r - read , select
+  u - update
+  d - delete, drop
+  sqlite3
+   table from a csv file
+    creating db
+     sqlite3 favorites.db
+    importing csv file
+     .mode csv
+     .import sample.csv favorites  //favorites is the table name, and sample is the csv file name
+     .schema //schema means the design of the database
+    SELECT * FROM favorites
+    SELECT COUNT(*) FROM favorites;
+    SELECT DISTINCT(language) FROM favorites;
+    SELECT COUNT(DISTINCT(language)) AS n FROM favorites;
+    SELECT language, COUNT(*) FROM favorites GROUP BY language;
+    SELECT language, COUNT(*) FROM favorites GROUP BY language ORDER BY COUNT(*) DESC;
+    SELECT language, COUNT(*) FROM favorites GROUP BY language ORDER BY COUNT(*) DESC LIMIT 1;
+    INSERT INTO favorites (column, ...) VALUES(value, ...);
+    UPDATE favorites SET language = 'C++' WHERE language = 'C';	
+    SELETC * FROM people WHERE name LIKE 'Steve C%';
+    
+   Indexing in sql
+    indexing some columns priar for searching fast
+    CREATE INDEX titleIndex ON shows (title);  // creates a Btree
+    
+race condition
+	simultaneous actions on same data by two or more users , data does not get updated as expected
+sql injection attack 
+	never use a f string for writing sql queries in python
+	little bobby table
+
+--------------------------------------------------------------lecture 8 HTML,CSS,JAVASCRIPT----------------------------------------------->
+
+IP - internet protocol
+	every computer have a unipue address
+TCP - transmission controll protocol
+	uniquely identify services
+	two type of numbers to identify
+	80 - HTTP
+	443 - HTTPS
+1.2.3.4:443
+
+DNS - DOMAIN NAMED SERVER
+	Domain names <=> IP addresses
+	allow us to use words instead of numbers to access info
+	
+HTTP - HYPER TEXT TRANSFER PROTOCOL
+	application level protocol - company use, programmer use to build up interesting things
+	https://www.example.com
+	com = TLD - top level domain
+	
+curl -I http://www.harvard.edu/
+	HTTP/1.1 301 Moved Permanently
+	Connection: close
+	Content-Length: 0
+	Server: Varnish
+	Retry-After: 0
+	Location: https://www.harvard.edu/
+	Accept-Ranges: bytes
+	Date: Wed, 17 Jan 2024 11:08:14 GMT
+	Via: 1.1 varnish
+	X-Served-By: cache-del21725-DEL
+	X-Cache: HIT
+	X-Cache-Hits: 0
+	Strict-Transport-Security: max-age=300
+curl -I https://www.harvard.edu/
+
