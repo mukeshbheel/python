@@ -72,3 +72,23 @@ curl -I http://www.harvard.edu/
 	Strict-Transport-Security: max-age=300
 curl -I https://www.harvard.edu/
 
+-------------------------------------------------------------cybersecurity------------------------------------------------------------------>
+
+brute force attack 
+	going through all the possible passwords
+
+encryption
+	this => uijt
+
+end to end encryption
+	there is no middleman who can see your data
+	
+full-disk encryption
+	all data in the disk(storage) is encrypted and decrypted using the password, so if device is lost then they wont be able to get the actual 	zeros and ones(data)
+	ransomware
+		buying the password key to steal someones data by decrypting
+		
+-------------------------------------------------------------lecture 9 flask------------------------------------------------------------------>
+
+
+
