@@ -90,5 +90,44 @@ full-disk encryption
 		
 -------------------------------------------------------------lecture 9 flask------------------------------------------------------------------>
 
+json = java script object notation
+
+
+
+------------------------------------------------------------hackerrank--------------------------------------------------------->
+its written using python, c, c++
+alocates continuous memory for the array 
+numpy arrays are way more faster then lists because of continuous memory
+NumPy is used to work with arrays. The array object in NumPy is called ndarray.
+We can create a NumPy ndarray object by using the array() function.
+
+if python and pip installed already
+	pip install numpy
+
+import numpy as np
+
+arr = np.array([1,2,3,4,5])
+print(arr)
+print(np.__version__) #to check the version
+print(type(arr))
+
+take input and split
+	import numpy
+	numpy.set_printoptions(legacy='1.13')
+	A = numpy.array(input().split(), dtype ='float')
+	
+numpy functions
+	N, M = map(int, input().split())
+	A = numpy.array([input().split() for _ in range(N)], dtype=int)
+	addition = numpy.sum(A, axis=0)
+	print(numpy.prod(addition))
+	
+	input
+		2 2
+		1 2
+		3 4
+	expected
+		24
+
 
 
