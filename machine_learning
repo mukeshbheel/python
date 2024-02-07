@@ -1,0 +1,65 @@
+------------------------------------------------------------linear regression-------------------------------------->
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+from sklearn.linear_model import LinearRegression
+
+df = pd.read_csv("SalaryPrediction.csv")
+df
+
+x = df.iloc[:, 0].values
+x
+
+x.shape
+
+x = df.iloc[:, 0].values.reshape(-1,1)
+x
+
+y = df.iloc[:, 1].values
+y
+
+plt.scatter(x, y)
+plt.title("graph title")
+plt.xlabel("x axis label")
+plt.ylabel("y axis label")
+
+lr = LinearRegression()
+model = lr.fit(x, y)
+
+model.intercept_ #y intersept
+
+model.coef_ #slope/regression coefficient
+
+y_pred = model.predict(x)
+
+model.scroe(x,y) #R squared/ coefficient of determination
+
+df.corr #coerrelation coefficient
+
+plt.plot(x, y)
+plt.plot(x, y_pred, color = "orange")
+plt.title("graph title")
+plt.xlabel("x axis label")
+plt.ylabel("y axis label")
+
+from sklearn.model_selection import train_test_split
+
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.3, random_state = 0)
+
+model = lr.fit(x_train, y_train)
+model.score(x_train, y_train)
+
+y_train_pred = model.predict(x_train)
+
+plt.plot(x_train, y_train)
+plt.plot(x_train, y_train_pred, color = "orange")
+plt.title("graph title")
+plt.xlabel("x axis label")
+plt.ylabel("y axis label")
+
+from sklearn.metrics import mean_absolute_error
+mae_train = mean_absoute_error(y_train, y_train_pred)
+
+
