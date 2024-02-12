@@ -62,4 +62,12 @@ plt.ylabel("y axis label")
 from sklearn.metrics import mean_absolute_error
 mae_train = mean_absoute_error(y_train, y_train_pred)
 
+-------------------------------------------------------------from you tube video-------------------------------------------->
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+%matplotlib inline  #so that visualize all graphs with in jupyter notebook
+
+
+
 
